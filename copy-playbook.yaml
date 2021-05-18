@@ -1,6 +1,8 @@
 -
   name: Copy Example
   hosts: target1
+  user: root
+  
   tasks:
     - name: Configure a MOTD (Message of the day)
       copy: 
