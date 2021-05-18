@@ -13,6 +13,7 @@
       copy: 
         src: hello.py
         dest: /home/osboxes/Documents
+        mode: 755
     
     - name: Putting a new line in a file
       lineinfile:
