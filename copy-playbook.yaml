@@ -1,10 +1,19 @@
 -
-  name: Copy Example
+  name: Copy a python file, edit and execute
   hosts: target1
   user: root
-  
+
   tasks:
-    - name: Configure a MOTD (Message of the day)
+    - name: Copy a local python file to the target
       copy: 
-        src: centos_motd
-        dest: /etc/motd
+        src: hello.py
+        dest: /home/osboxes/Documents
+    
+    - name: Putting a new line in a file
+      lineinfile:
+        dest: /home/osboxes/Documents/hello.py
+        line: "print('putting a line in the end of the file')"
+
+    - name: Exec the py file
+      command: python /home/osboxes/Documents/hello.py
+

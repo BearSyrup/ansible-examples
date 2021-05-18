@@ -1,0 +1,1 @@
+print("Hello guys! Wish you a great day with a lot of 'motivation'")
