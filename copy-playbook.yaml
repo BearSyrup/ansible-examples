@@ -20,5 +20,8 @@
         line: "print('wow so dangerous')"
 
     - name: Exec the py file
+      shell: ls /home/osboxes/Documents/hello.py
+
+    - name: Exec the py file
       shell: /home/osboxes/Documents/hello.py
 
