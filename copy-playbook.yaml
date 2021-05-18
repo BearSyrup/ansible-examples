@@ -6,9 +6,9 @@
   tasks:
     - name: Install the latest python
       yum:
-        name: python
+        name: python3
         state: latest
-        
+
     - name: Copy a local python file to the target
       copy: 
         src: hello.py
