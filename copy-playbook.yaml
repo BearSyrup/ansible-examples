@@ -10,16 +10,13 @@
         name: python3
         state: latest
 
-    - name: Copy a local python file to the target
+    - name: Copy a local file to the target
       copy: 
-        src: hello.py
+        src: hello
         dest: /home/osboxes/Documents
         mode: 777
     
     - name: Putting a new line in a file
       lineinfile:
-        dest: /home/osboxes/Documents/hello.py
-        line: "print('wow so dangerous')"
-
-    - name: Exec the py file
-      shell: /home/osboxes/Documents/hello.py
+        dest: /home/osboxes/Documents/hello
+        line: "Hello! I'm not what I was anymore"

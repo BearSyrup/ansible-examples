@@ -1,0 +1,29 @@
+-
+  name: Copy a file, install unzip and discompact the file
+  hosts: target1
+  become: true
+  user: root
+
+  tasks:
+    - name: download a image as an example
+      get_url:
+        url: https://unsplash.com/photos/JBrbzg5N7Go/download?force=true
+        dest: /home/osboxes/Documents/dog.jpeg
+        mode: 0440
+
+    - name: Install the latest unzip
+      package:
+        name: unzip
+        state: latest
+
+    - name: Copy a local file to the target
+      copy: 
+        src: Docs.zip
+        dest: /home/osboxes/Documents
+        mode: 777
+    
+    - name: Unzipping the file
+      unarchive:
+        src: Docs.zip
+        dest: /home/osboxes/Documents
+        mode: 0755
