@@ -13,7 +13,7 @@
       copy: 
         src: hello.py
         dest: /home/osboxes/Documents
-        mode: 755
+        mode: 777
     
     - name: Putting a new line in a file
       lineinfile:
@@ -21,8 +21,4 @@
         line: "print('wow so dangerous')"
 
     - name: Exec the py file
-      shell: ls /home/osboxes/Documents/hello.py
-
-    - name: Exec the py file
       shell: /home/osboxes/Documents/hello.py
-
