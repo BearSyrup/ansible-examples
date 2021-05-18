@@ -1,1 +1,3 @@
-print("Hello guys! Wish you a great day with a lot of 'motivation'")
+with open ("./file.txt", 'r') as file:
+    file.write("is the the real life?")
+    
