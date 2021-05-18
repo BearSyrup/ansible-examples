@@ -1,6 +1,7 @@
 -
   name: Copy a python file, edit and execute
   hosts: target1
+  become: true
   user: root
 
   tasks:
