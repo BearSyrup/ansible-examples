@@ -1,0 +1,7 @@
+[centos]
+target1
+target2
+
+[centos:vars]
+ansible_user=root
+
