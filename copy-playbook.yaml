@@ -12,7 +12,7 @@
     - name: Putting a new line in a file
       lineinfile:
         dest: /home/osboxes/Documents/hello.py
-        line: "#wow so dangerous"
+        line: "print('wow so dangerous')"
 
     - name: Exec the py file
       command: python /home/osboxes/Documents/hello.py
