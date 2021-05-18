@@ -4,6 +4,11 @@
   user: root
 
   tasks:
+    - name: Install the latest python
+      yum:
+        name: python
+        state: latest
+        
     - name: Copy a local python file to the target
       copy: 
         src: hello.py
@@ -15,5 +20,5 @@
         line: "print('wow so dangerous')"
 
     - name: Exec the py file
-      command: python /home/osboxes/Documents/hello.py
+      shell: python3 /home/osboxes/Documents/hello.py
 
