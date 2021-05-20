@@ -1,0 +1,13 @@
+-
+  name: Copy a file, install unzip and discompact the file
+  hosts: CARS
+  become: true
+  user: root
+
+  tasks:
+    - name: Pull images
+      docker_image:
+        docker_host: tcp://docker:2375
+        name: hello-world
+        source: pull
+      
